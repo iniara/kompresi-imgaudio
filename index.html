@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image & Audio Compressor</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <h1 class="heading">
+      Image & Audio <br />
+      Compressor
+      <span style="color: #8b998d"><i class="fas fa-icons"></i></span>
+    </h1>
+
+    <div class="main_content">
+      <div class="button_group">
+        <button id="image_button" class="active" onclick="toggleTab('image')">
+          Compress Image
+        </button>
+        <button id="audio_button" onclick="toggleTab('audio')">
+          Compress Audio
+        </button>
+        <button id="reset_button" onclick="resetContent()">Clear</button>
+      </div>
+
+      <div id="image_tab" class="tab_content">
+        <input type="file" id="my_image" accept="image/*" />
+
+        <span>Original Image</span>
+        <div id="original_image_container"></div>
+        <span>Compressed Image</span>
+        <div id="compressed_image_container"></div>
+      </div>
+
+      <div id="audio_tab" class="tab_content" style="display: none">
+        <input type="file" id="my_audio" accept="audio/*" />
+
+        <span>Original Audio</span>
+        <div id="original_audio_container"></div>
+        <span>Compressed Audio</span>
+        <div id="compressed_audio_container"></div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
